@@ -1,0 +1,41 @@
+Algorithme      tab-extrait
+    fonction Sous_tab(tab:tableau , e:entier ,f:entier):reel
+    variable         Tableau:sous_tableau(): entier 
+                     j , c :entier  
+Debut: 
+    pour i <-- e à f pas 1 faire 
+            c <-- c + 1
+    fin pour 
+    Redim (sous_tableau(c))
+j <--0 
+pour i <-- e à f pas 1 faire 
+    sous_tableau[j] <-- tab[i]
+    j <--  j + 1
+fin pour 
+    retourn sous_tableau 
+fin fonction
+
+variable  
+            Tableau T(10)
+            indice_debut , indice_fin , : entier 
+            reponse : chaine de caractere 
+debut 
+
+    repeter
+        pour i <-- 0 à 9 pas 1 faire 
+            Ecrire("veuillez entrer l element",i":)
+            lire(T(i))
+        fin pour 
+        Ecrire("veuillez entrer l indice de debut :")
+        lire(indice_debut)
+        Ecrire("veuillez entrer l indice de fin:")
+        lire(indice_fin)
+
+        resultat = Sous_tab(T, indice_debut , indice-fin)
+        Ecrire("le sous tableau extrait est :", resultat)
+
+        Ecrire("Voulez-vousune nouvelle liste? (oui/non)")
+        lire(reponse)
+    jusqu'à reponse <> "oui"
+fin
+
